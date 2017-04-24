@@ -13,15 +13,15 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',
+    'hostname'        => 'localhost',
     // 数据库名
-    'database'        => '',
+    'database'        => 'tp_test',
     // 用户名
     'username'        => 'root',
     // 密码
-    'password'        => '',
+    'password'        => 'root',
     // 端口
-    'hostport'        => '',
+    'hostport'        => '3306',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数
@@ -29,7 +29,7 @@ return [
     // 数据库编码默认采用utf8
     'charset'         => 'utf8',
     // 数据库表前缀
-    'prefix'          => '',
+    'prefix'          => 'think_',
     // 数据库调试模式
     'debug'           => true,
     // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
@@ -50,4 +50,13 @@ return [
     'datetime_format' => 'Y-m-d H:i:s',
     // 是否需要进行SQL性能分析
     'sql_explain'     => false,
+
+    'AUTH_CONFIG' => array(
+      'AUTH_ON' => true, //认证开关
+      'AUTH_TYPE' => 1, // 认证方式，1为时时认证；2为登录认证。
+      'AUTH_GROUP' => 'think_auth_group', //用户组数据表名
+      'AUTH_GROUP_ACCESS' => 'think_auth_group_access', //用户组明细表
+      'AUTH_RULE' => 'think_auth_rule', //权限规则表
+      'AUTH_USER' => 'think_user'//用户信息表
+    )
 ];
